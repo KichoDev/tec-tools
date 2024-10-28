@@ -5,7 +5,9 @@
 @section('content')
 <div class="container">
     <h1 class="mt-4">Technologies list</h1>
-    <a href="{{ route('technologies.create') }}" class="btn btn-primary">Create</a>
+    <div class="text-end">
+        <a href="{{ route('technologies.create') }}" class="btn btn-primary"><i class="bi bi-plus"></i>Create</a>
+    </div>
     <table class="table">
         <thead>
             <tr>
