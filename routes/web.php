@@ -13,3 +13,4 @@ Route::post('/technologies/store', [TechnologyController::class, 'store'])->name
 Route::get('/technologies/{technology}', [TechnologyController::class, 'show'])->name('technologies.show');
 Route::get('/technologies/{technology}/edit', [TechnologyController::class, 'edit'])->name('technologies.edit');
 Route::patch('/technologies/{technology}/update', [TechnologyController::class, 'update'])->name('technologies.update');
+Route::delete('/technologies/{technology}/destroy', [TechnologyController::class, 'destroy'])->name('technologies.destroy');
