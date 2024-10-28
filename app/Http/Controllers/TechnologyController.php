@@ -21,7 +21,7 @@ class TechnologyController extends Controller
      */
     public function create()
     {
-        //
+        return view('technologies.create');
     }
 
     /**
