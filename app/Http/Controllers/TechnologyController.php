@@ -29,7 +29,17 @@ class TechnologyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+        ]);
+
+        $technology = new Technology();
+        $technology->name = $request->name;
+        $technology->description = $request->description;
+        $technology->save();
+
+        return redirect()->route('technologies.index')->with('success', 'Technology created successfully.');
     }
 
     /**
