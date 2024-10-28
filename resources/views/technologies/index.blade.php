@@ -28,8 +28,8 @@
                 <td>{{ $technology->name }}</td>
                 <td>{{ $technology->description }}</td>
                 <td class="text-end">
-                    <a href="{{ route('technologies.show', $technology->id) }}" class="btn btn-primary"><i class="bi bi-eye"></i>View</a>
-                    <a href="{{ route('technologies.edit', $technology->id) }}" class="btn btn-primary"><i class="bi bi-pencil-square"></i>Edit</a>
+                    <a href="{{ route('technologies.show', $technology->id) }}" class="btn btn-info"><i class="bi bi-eye"></i>View</a>
+                    <a href="{{ route('technologies.edit', $technology->id) }}" class="btn btn-success"><i class=" bi bi-pencil-square"></i>Edit</a>
                     <form action="{{ route('technologies.destroy', $technology->id) }}" method="POST" class="d-inline">
                         @csrf
                         @method('DELETE')

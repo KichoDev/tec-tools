@@ -53,9 +53,9 @@ class TechnologyController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Technology $technology)
     {
-        //
+        return view('technologies.edit', compact('technology'));
     }
 
     /**
