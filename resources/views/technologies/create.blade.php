@@ -7,13 +7,15 @@
     <form action="{{ route('technologies.store') }}" method="POST">
         @csrf
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="name">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <label for="description" class="form-label">Description</label>
+            <input type="text" class="form-control" id="description" name="description" placeholder="description">
         </div>
+        <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i>Submit</button>
+        <a href="{{ route('technologies.index') }}" class="btn btn-secondary"><i class="bi bi-arrow-left"></i>Back</a>
     </form>
 </div>
 @endsection
