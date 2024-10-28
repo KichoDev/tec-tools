@@ -11,4 +11,5 @@ Route::get('/technologies', [TechnologyController::class, 'index'])->name('techn
 Route::get('/technologies/create', [TechnologyController::class, 'create'])->name('technologies.create');
 Route::post('/technologies/store', [TechnologyController::class, 'store'])->name('technologies.store');
 Route::get('/technologies/{technology}', [TechnologyController::class, 'show'])->name('technologies.show');
-Route::get('/technologies/{technology}/edit', [TechnologyController::class, ''])->name('technologies.');
+Route::get('/technologies/{technology}/edit', [TechnologyController::class, 'edit'])->name('technologies.edit');
+Route::patch('/technologies/{technology}/update', [TechnologyController::class, 'update'])->name('technologies.update');
