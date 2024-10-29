@@ -61,16 +61,26 @@ class TechnologyController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Technology $technology)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+        ]);
+
+        $technology->name = $request->name;
+        $technology->description = $request->description;
+        $technology->save();
+
+        return redirect()->route('technologies.index')->with('success', 'Technology updated successfully.');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Technology $technology)
     {
-        //
+        $technology->delete();
+        return redirect()->route('technologies.index')->with('success', 'Technology deleted successfully.');
     }
 }

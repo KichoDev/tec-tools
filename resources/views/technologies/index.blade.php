@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container">
-    <h1 class="mt-4">Technologies list</h1>
+    <h1 class="mt-4">Lista de Tecnologías</h1>
     @if(session('success'))
     <div class="alert alert-success mt-2">
         {{ session('success') }}
@@ -33,7 +33,7 @@
                     <form action="{{ route('technologies.destroy', $technology->id) }}" method="POST" class="d-inline">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-danger"><i class="bi bi-trash"></i>Delete</button>
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure')"><i class="bi bi-trash"></i>Delete</button>
                     </form>
                 </td>
             </tr>
